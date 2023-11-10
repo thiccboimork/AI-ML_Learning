@@ -44,6 +44,5 @@ rf_val_mae = mean_absolute_error(val_y, rf_model.predict(val_X))
 
 print(f"Validation MAE for Random Forest Model: {rf_val_mae}")
 
-output = pd.DataFrame({'Id': home_data.Id,
-                        'ColumnName': val_predictions})
+output = pd.DataFrame({'Id': home_data.Id, 'ColumnName': val_predictions})
 output.to_csv('submission.csv', index=False)
